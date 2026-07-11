@@ -1,0 +1,50 @@
+---
+import Base from "../../layouts/Base.astro";
+import { withBase } from "../../utils/paths";
+---
+<Base title="Donate - rust-nostr" description="Support rust-nostr development with bitcoin donations or patron funding.">
+  <main class="page">
+    <section class="page-hero">
+      <p class="eyebrow">Donate</p>
+      <h1>Support rust-nostr development.</h1>
+      <p>If you actively use rust-nostr libraries, software, or services, please consider supporting the project.</p>
+    </section>
+
+    <section class="content-grid">
+      <article>
+        <h2>Bitcoin</h2>
+        <dl class="details-list">
+          <dt>On-chain</dt>
+          <dd><code>bc1quk478kpm45744q5pt3p9j42fnv72ykytmt3z0j</code></dd>
+          <dt>Lightning</dt>
+          <dd><code>pay@yukikishimoto.com</code><br /><code>yuki@minibits.cash</code></dd>
+          <dt>Liquid</dt>
+          <dd><code>lq1qqdwn93gehkq4mtz2amsagawgfd6y9ksrkekal5u8tmle07f9fa0kgcnfez4lguhekeeyhy78nfqy8tyqvxayywgpwvm73t6av</code></dd>
+          <dt>Coinos</dt>
+          <dd><a href="https://coinos.io/yuki">coinos.io/yuki</a></dd>
+        </dl>
+      </article>
+      <article>
+        <h2>Altcoins</h2>
+        <p>We do not accept coins different from bitcoin.</p>
+        <p>Swap services that can convert directly into bitcoin:</p>
+        <ul>
+          <li><a href="https://sideshift.ai/">SideShift</a></li>
+          <li><a href="https://fixedfloat.com/">FixedFloat</a></li>
+          <li><a href="https://flyp.me/">Flyp.me</a></li>
+        </ul>
+        <p class="small-note">rust-nostr is not affiliated with these services.</p>
+      </article>
+      <article>
+        <h2>Become a Patron</h2>
+        <p>Organizations, companies, and individuals can support ongoing work with significant financial contributions.</p>
+        <p><a href={withBase("/patrons/")}>View Patrons</a></p>
+      </article>
+      <article>
+        <h2>Verify details</h2>
+        <p>Donation details can be verified via the rust-nostr repository fund directory.</p>
+        <p><a href="https://github.com/rust-nostr/nostr/tree/master/contrib/fund">Verify on GitHub</a></p>
+      </article>
+    </section>
+  </main>
+</Base>

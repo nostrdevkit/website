@@ -1,0 +1,64 @@
+---
+import Base from "../layouts/Base.astro";
+import { withBase } from "../utils/paths";
+---
+<Base>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-logo" src={withBase("/assets/logo.svg")} alt="" width="132" height="132" />
+      <p class="eyebrow">Nostr development kit</p>
+      <h1 id="hero-title">Nostr for builders.</h1>
+      <p class="hero-text">
+        Fast and reliable nostr libraries for multiple languages and runtimes.
+      </p>
+      <div class="hero-actions" aria-label="Primary actions">
+        <a class="button button-primary hero-button" href="https://doc.rust-nostr.org/">Read the docs</a>
+        <a class="button button-secondary hero-button" href="https://github.com/rust-nostr">Visit repository</a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="why-title">
+      <div class="section-heading">
+        <p class="eyebrow">Why rust-nostr?</p>
+        <h2 id="why-title">A practical foundation for nostr software.</h2>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <h3>Native APIs</h3>
+          <p>Use ergonomic bindings for Rust, Python, Kotlin, Swift, and other application stacks.</p>
+        </article>
+        <article>
+          <h3>Multi-runtime</h3>
+          <p>Build for native applications, WebAssembly, embedded devices, servers, and clients.</p>
+        </article>
+        <article>
+          <h3>Rust core</h3>
+          <p>Keep protocol-heavy code fast, memory-safe, reliable, and predictable.</p>
+        </article>
+        <article>
+          <h3>Broad NIP support</h3>
+          <p>Work with the relevant NIPs needed by real nostr applications.</p>
+        </article>
+        <article>
+          <h3>Reliable APIs</h3>
+          <p>Use libraries designed around stable behavior, clear examples, and predictable integration.</p>
+        </article>
+        <article>
+          <h3>Open source</h3>
+          <p>MIT licensed, maintained in the open, and built for the nostr ecosystem.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section docs-section" aria-labelledby="docs-title">
+      <div>
+        <p class="eyebrow">Documentation</p>
+        <h2 id="docs-title">Go deeper in the book.</h2>
+        <p class="section-text">
+          The book contains installation notes, current APIs, examples, etc.
+        </p>
+      </div>
+      <a class="button button-secondary docs-button" href="https://doc.rust-nostr.org/">Open the book</a>
+    </section>
+  </main>
+</Base>
