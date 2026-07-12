@@ -1,10 +1,42 @@
 ---
+import { site } from "../config/site";
 import { withBase } from "../utils/paths";
 
 const {
-  title = "rust-nostr",
-  description = "rust-nostr is a fast, reliable nostr development kit for multiple languages and runtimes.",
+  title = site.title,
+  description = site.description,
+  type = "website",
 } = Astro.props;
+
+const pageTitle = title === site.name ? site.title : title;
+const siteBase = Astro.site ?? new URL(site.url);
+const canonicalUrl = new URL(Astro.url.pathname, siteBase).toString();
+const logoUrl = new URL(withBase(site.logo), siteBase).toString();
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: site.name,
+    url: siteBase.toString(),
+    logo: logoUrl,
+    sameAs: [site.githubUrl],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: site.name,
+    url: siteBase.toString(),
+    description: site.description,
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      logo: {
+        "@type": "ImageObject",
+        url: logoUrl,
+      },
+    },
+  },
+];
 ---
 <!doctype html>
 <html lang="en">
@@ -12,19 +44,36 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <title>{title}</title>
+    <meta name="keywords" content={site.keywords.join(", ")} />
+    <meta name="theme-color" content={site.themeColor} />
+    <meta name="author" content={site.name} />
+    <meta name="robots" content="index, follow" />
+    <meta name="application-name" content={site.name} />
+    <meta name="apple-mobile-web-app-title" content={site.shortName} />
+    <link rel="canonical" href={canonicalUrl} />
+    <title>{pageTitle}</title>
     <link rel="icon" href={withBase("/assets/logo.svg")} type="image/svg+xml" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     <link rel="stylesheet" href={withBase("/styles.css")} />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href={withBase("/")} aria-label="rust-nostr home">
+      <a class="brand" href={withBase("/")} aria-label="Nostr Dev Kit home">
         <img class="brand-mark" src={withBase("/assets/logo.svg")} alt="" width="36" height="36" />
-        <span>rust-nostr</span>
+        <span>{site.name}</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="https://doc.rust-nostr.org/">Docs</a>
-        <a href="https://github.com/rust-nostr/nostr">GitHub</a>
+        <a href={site.docsUrl}>Docs</a>
+        <a href={site.repositoryUrl}>GitHub</a>
         <a class="nav-action" href={withBase("/donate/")}>Donate</a>
       </nav>
     </header>
@@ -35,9 +84,9 @@ const {
       <div>
         <a class="footer-brand" href={withBase("/")}>
           <img class="brand-mark" src={withBase("/assets/logo.svg")} alt="" width="32" height="32" />
-          <span>rust-nostr</span>
+          <span>{site.name}</span>
         </a>
-        <p>Fast and reliable nostr libraries for multiple languages and runtimes.</p>
+        <p>The Nostr Dev Kit project (aka rust-nostr) is building tools and libraries designed to be a solid foundation for nostr software.</p>
       </div>
       <nav class="footer-links" aria-label="Footer navigation">
         <a href={withBase("/maintainers/")}>Maintainers</a>

@@ -1,6 +1,6 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">rust-nostr logo</title>
-  <desc id="desc">A purple Rust-style gear with a white center and purple N.</desc>
+  <title id="title">Nostr Dev Kit logo</title>
+  <desc id="desc">A purple modular gear mark with a white center and Nostr monogram.</desc>
   <defs>
     <linearGradient id="purple" x1="42" y1="24" x2="214" y2="232" gradientUnits="userSpaceOnUse">
       <stop stop-color="#B875FF"/>

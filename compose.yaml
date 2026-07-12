@@ -1,11 +1,11 @@
-name: rust-nostr-website
+name: nostr-dev-kit-website
 
 services:
   website:
     build: .
     command: npm run dev -- --force
     ports:
-      - "4321:4321"
+      - "127.0.0.1:4321:4321"
     environment:
       ASTRO_TELEMETRY_DISABLED: "1"
     volumes:

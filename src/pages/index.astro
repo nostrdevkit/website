@@ -1,30 +1,31 @@
 ---
 import Base from "../layouts/Base.astro";
+import { site } from "../config/site";
 import { withBase } from "../utils/paths";
 ---
 <Base>
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <img class="hero-logo" src={withBase("/assets/logo.svg")} alt="" width="132" height="132" />
-      <p class="eyebrow">Nostr development kit</p>
+      <p class="eyebrow">Nostr Dev Kit</p>
       <h1 id="hero-title">Nostr for builders.</h1>
       <p class="hero-text">
         Fast and reliable nostr libraries for multiple languages and runtimes.
       </p>
       <div class="hero-actions" aria-label="Primary actions">
-        <a class="button button-primary hero-button" href="https://doc.rust-nostr.org/">Read the docs</a>
-        <a class="button button-secondary hero-button" href="https://github.com/rust-nostr">Visit repository</a>
+        <a class="button button-primary hero-button" href={site.docsUrl}>Read the docs</a>
+        <a class="button button-secondary hero-button" href={site.githubUrl}>View GitHub</a>
       </div>
     </section>
 
     <section class="section" aria-labelledby="why-title">
       <div class="section-heading">
-        <p class="eyebrow">Why rust-nostr?</p>
+        <p class="eyebrow">Why Nostr Dev Kit?</p>
         <h2 id="why-title">A practical foundation for nostr software.</h2>
       </div>
       <div class="feature-grid">
         <article>
-          <h3>Native APIs</h3>
+          <h3>Multi-language APIs</h3>
           <p>Use ergonomic bindings for Rust, Python, Kotlin, Swift, and other application stacks.</p>
         </article>
         <article>
@@ -37,15 +38,15 @@ import { withBase } from "../utils/paths";
         </article>
         <article>
           <h3>Broad NIP support</h3>
-          <p>Work with the relevant NIPs needed by real nostr applications.</p>
+          <p>Work with the protocol capabilities needed by real Nostr applications.</p>
         </article>
         <article>
-          <h3>Reliable APIs</h3>
-          <p>Use libraries designed around stable behavior, clear examples, and predictable integration.</p>
+          <h3>Stable integration</h3>
+          <p>Use APIs designed around stable behavior, clear examples, and predictable releases.</p>
         </article>
         <article>
           <h3>Open source</h3>
-          <p>MIT licensed, maintained in the open, and built for the nostr ecosystem.</p>
+          <p>MIT licensed, maintained in the open, and built for the Nostr ecosystem.</p>
         </article>
       </div>
     </section>
@@ -58,7 +59,7 @@ import { withBase } from "../utils/paths";
           The book contains installation notes, current APIs, examples, etc.
         </p>
       </div>
-      <a class="button button-secondary docs-button" href="https://doc.rust-nostr.org/">Open the book</a>
+      <a class="button button-secondary docs-button" href={site.docsUrl}>Open the book</a>
     </section>
   </main>
 </Base>
