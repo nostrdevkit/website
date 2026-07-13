@@ -66,8 +66,8 @@ a {
 }
 
 .brand-mark {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
 }
 
 .site-nav {
@@ -104,9 +104,9 @@ a {
 }
 
 .hero-logo {
-  width: 136px;
-  height: 136px;
-  margin-bottom: 30px;
+  width: 176px;
+  height: 176px;
+  margin-bottom: 26px;
   filter: drop-shadow(0 24px 44px rgba(76, 29, 149, 0.42));
 }
 
@@ -534,6 +534,11 @@ code {
   font-weight: 700;
 }
 
+.footer-brand .brand-mark {
+  width: 40px;
+  height: 40px;
+}
+
 .site-footer p {
   max-width: 360px;
   margin-bottom: 0;
@@ -609,8 +614,8 @@ code {
   }
 
   .hero-logo {
-    width: 112px;
-    height: 112px;
+    width: 144px;
+    height: 144px;
   }
 
   h1 {
