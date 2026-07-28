@@ -12,6 +12,7 @@ const pageTitle = title === site.name ? site.title : title;
 const siteBase = Astro.site ?? new URL(site.url);
 const canonicalUrl = new URL(Astro.url.pathname, siteBase).toString();
 const logoUrl = new URL(withBase(site.logo), siteBase).toString();
+const socialImageUrl = new URL(withBase(site.socialImage), siteBase).toString();
 const structuredData = [
   {
     "@context": "https://schema.org",
@@ -59,9 +60,16 @@ const structuredData = [
     <meta property="og:description" content={description} />
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={site.socialImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:image:alt" content={site.socialImageAlt} />
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     <link rel="stylesheet" href={withBase("/styles.css")} />
   </head>

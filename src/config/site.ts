@@ -6,6 +6,8 @@ export const site = {
     "The Nostr Dev Kit project (aka rust-nostr) is building tools and libraries designed to be a solid foundation for nostr software.",
   url: "https://nostrdevkit.org",
   logo: "/assets/logo.svg",
+  socialImage: "/assets/social-preview.png",
+  socialImageAlt: "Nostr Dev Kit - Nostr for builders",
   docsUrl: "https://doc.nostrdevkit.org/",
   githubUrl: "https://github.com/nostrdevkit",
   repositoryUrl: "https://github.com/nostrdevkit",
