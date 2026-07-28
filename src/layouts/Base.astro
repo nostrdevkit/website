@@ -19,7 +19,7 @@ const structuredData = [
     name: site.name,
     url: siteBase.toString(),
     logo: logoUrl,
-    sameAs: [site.githubUrl],
+    sameAs: Object.values(site.socials).map(({ url }) => url),
   },
   {
     "@context": "https://schema.org",
@@ -92,8 +92,8 @@ const structuredData = [
         <a href={withBase("/maintainers/")}>Maintainers</a>
         <a href={withBase("/patrons/")}>Patrons</a>
         <a href={withBase("/donate/")}>Donate</a>
+        <a href={withBase("/social/")}>Social</a>
         <a href={withBase("/license/")}>License</a>
-        <a href="https://matrix.to/#/#nostrdevkit:matrix.org" target="_blank" rel="noopener noreferrer">Matrix Space</a>
       </nav>
     </footer>
   </body>

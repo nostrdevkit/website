@@ -1,0 +1,83 @@
+---
+import { site } from "../../config/site";
+import Base from "../../layouts/Base.astro";
+
+const profiles = [
+  {
+    ...site.socials.nostr,
+    description: "Follow project news, releases, and updates on Nostr.",
+    action: "View Nostr profile",
+  },
+  {
+    ...site.socials.github,
+    description: "Browse the project's repositories, issues, and development activity.",
+    action: "View GitHub organization",
+  },
+];
+
+const communities = [
+  {
+    ...site.socials.matrix,
+    description: "Join the project space to find community rooms and talk with contributors.",
+    action: "Open Matrix Space",
+  },
+];
+---
+<Base
+  title="Social - Nostr Dev Kit"
+  description="Official Nostr Dev Kit profiles and community spaces."
+>
+  <main class="page">
+    <section class="page-hero">
+      <p class="eyebrow">Social</p>
+      <h1>Follow the project. Join the community.</h1>
+      <p>Official profiles, groups, and places to connect with Nostr Dev Kit.</p>
+    </section>
+
+    <section class="social-section" aria-labelledby="profiles-title">
+      <div class="social-heading">
+        <p class="eyebrow">Profiles</p>
+        <h2 id="profiles-title">Project updates and development.</h2>
+      </div>
+      <div class="social-list">
+        {profiles.map((profile) => (
+          <article class="social-item">
+            <div>
+              <h3>{profile.name}</h3>
+              <p>{profile.description}</p>
+            </div>
+            <div class="social-destination">
+              <code>{profile.identifier}</code>
+              <a href={profile.url} target="_blank" rel="noopener noreferrer">
+                {profile.action}
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="social-section" aria-labelledby="communities-title">
+      <div class="social-heading">
+        <p class="eyebrow">Community</p>
+        <h2 id="communities-title">Talk with contributors.</h2>
+      </div>
+      <div class="social-list">
+        {communities.map((community) => (
+          <article class="social-item">
+            <div>
+              <h3>{community.name}</h3>
+              <p>{community.description}</p>
+            </div>
+            <div class="social-destination">
+              <code>{community.identifier}</code>
+              <a href={community.url} target="_blank" rel="noopener noreferrer">
+                {community.action}
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+</Base>
