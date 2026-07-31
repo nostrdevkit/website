@@ -3,7 +3,7 @@ export const site = {
   shortName: "NDK",
   title: "Nostr Dev Kit",
   description:
-    "The Nostr Dev Kit project (aka rust-nostr) is building tools and libraries designed to be a solid foundation for nostr software.",
+    "Nostr Dev Kit (formerly rust-nostr) is a collection of libraries and tools that provides a solid foundation for building nostr software.",
   url: "https://nostrdevkit.org",
   logo: "/assets/logo.svg",
   socialImage: "/assets/social-preview.png",
