@@ -40,8 +40,12 @@ import { withBase } from "../../utils/paths";
       </article>
       <article>
         <h2>Verify details</h2>
-        <p>Donation details can be verified via the project repository fund directory.</p>
-        <p><a href="https://github.com/nostrdevkit/nostr/tree/master/contrib/fund">Verify on GitHub</a></p>
+        <p>The official donation addresses are published in a signed declaration on this site.</p>
+        <p>
+          <a href={withBase("/fund/donation-addresses.txt")}>View signed declaration</a>
+          ·
+          <a href={withBase("/fund/donation-addresses.txt.asc")}>View PGP signature</a>
+        </p>
       </article>
     </section>
   </main>
