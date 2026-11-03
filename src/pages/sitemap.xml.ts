@@ -1,7 +1,7 @@
 import type { APIContext } from "astro";
 import { site as siteConfig } from "../config/site";
 
-const pages = ["/", "/donate/", "/license/", "/maintainers/", "/patrons/", "/social/"];
+const pages = ["/", "/donate/", "/license/", "/maintainers/", "/social/"];
 
 export function GET({ site }: APIContext) {
   const baseUrl = site ?? new URL(siteConfig.url);

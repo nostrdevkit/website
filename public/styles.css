@@ -344,44 +344,6 @@ h3 {
   padding-left: 20px;
 }
 
-.patron-list {
-  display: grid;
-  gap: 1px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--line);
-  box-shadow: var(--shadow);
-}
-
-.patron-list article {
-  padding: 28px;
-  background: rgba(18, 11, 34, 0.94);
-}
-
-.patron-list article:nth-child(2n) {
-  background: rgba(23, 16, 38, 0.96);
-}
-
-.patron-list h2 {
-  margin-bottom: 10px;
-  font-size: 26px;
-}
-
-.patron-list p {
-  max-width: 720px;
-  margin-bottom: 0;
-  color: var(--muted);
-}
-
-.patron-list a {
-  color: var(--accent-strong);
-}
-
-.patron-list a:hover {
-  color: var(--text);
-}
-
 .table-wrap {
   overflow-x: auto;
   border: 1px solid var(--line);
