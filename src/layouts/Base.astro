@@ -40,7 +40,7 @@ const structuredData = [
 ];
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -71,37 +71,78 @@ const structuredData = [
     <meta name="twitter:image" content={socialImageUrl} />
     <meta name="twitter:image:alt" content={site.socialImageAlt} />
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <script is:inline>
+      try {
+        const stored = localStorage.getItem("ndk-theme");
+        if (stored === "light" || stored === "dark") {
+          document.documentElement.setAttribute("data-theme", stored);
+        }
+      } catch {}
+    </script>
     <link rel="stylesheet" href={withBase("/styles.css")} />
   </head>
   <body>
+    <div class="backdrop" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="grid-overlay"></div>
+      <div class="noise"></div>
+    </div>
+
     <header class="site-header">
-      <a class="brand" href={withBase("/")} aria-label="Nostr Dev Kit home">
-        <img class="brand-mark" src={withBase("/assets/logo.svg")} alt="" width="44" height="44" />
-        <span>{site.name}</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href={site.docsUrl}>Docs</a>
-        <a href={site.repositoryUrl}>GitHub</a>
-        <a class="nav-action" href={withBase("/donate/")}>Donate</a>
-      </nav>
+      <div class="header-inner">
+        <a class="brand" href={withBase("/")} aria-label="Nostr Dev Kit home">
+          <img class="brand-mark" src={withBase("/assets/logo.svg")} alt="" width="36" height="36" />
+          <span class="brand-text">{site.name}</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href={site.docsUrl}>Docs</a>
+          <a href={withBase("/team/")}>Team</a>
+          <a href={site.repositoryUrl}>GitHub</a>
+          <a class="nav-action" href={withBase("/donate/")}>Donate</a>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+        </nav>
+      </div>
     </header>
 
     <slot />
 
-    <footer class="site-footer">
+    <footer class="site-footer" id="donate">
       <div>
         <a class="footer-brand" href={withBase("/")}>
-          <img class="brand-mark" src={withBase("/assets/logo.svg")} alt="" width="40" height="40" />
-          <span>{site.name}</span>
+          <img class="brand-mark" src={withBase("/assets/logo.svg")} alt="" width="32" height="32" />
+          <span class="brand-text">{site.name}</span>
         </a>
-        <p>{site.description}</p>
+        <p class="footer-desc">{site.description}</p>
       </div>
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href={withBase("/maintainers/")}>Maintainers</a>
-        <a href={withBase("/donate/")}>Donate</a>
-        <a href={withBase("/social/")}>Social</a>
-        <a href={withBase("/license/")}>License</a>
+        <div class="footer-col">
+          <p class="footer-heading">Site</p>
+          <a href={withBase("/team/")}>Team</a>
+          <a href={withBase("/donate/")}>Donate</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Social</p>
+          {Object.values(site.socials).map((social) => (
+            <a href={social.url} target="_blank" rel="noopener noreferrer">{social.name}</a>
+          ))}
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">External</p>
+          <a href={site.docsUrl}>Docs</a>
+          <a href={site.githubUrl}>GitHub</a>
+        </div>
       </nav>
     </footer>
+
+    <script is:inline src={withBase("/site.js")} defer></script>
   </body>
 </html>

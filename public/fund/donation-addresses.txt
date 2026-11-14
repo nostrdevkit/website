@@ -1,5 +1,22 @@
-The Rust Nostr Project has one official bitcoin (BTC) donation address:
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+The Nostr Dev Kit Project has one official bitcoin (BTC) donation address:
 
 bc1quk478kpm45744q5pt3p9j42fnv72ykytmt3z0j
+-----BEGIN PGP SIGNATURE-----
 
-Last updated: 2024-01-17
+iQIzBAEBCgAdFiEEhvMQWt+oq1hyaNzXjT3NBCSWGdEFAmr4amEACgkQjT3NBCSW
+GdHHRg/9EViCD4kutDo2frwDLqqKM68Xy61DTnfT3Lf3/3bc9fBg7jO9l+n1F5oq
+rXLO0l5OkUi/30VaAZuwBFPtJhKUzIJZpganPYyjy0yH5Ve41/ZdiOUO/IEFUnjc
+CAvJgRjssQZ5mbn9bUDVDDbo5HyUTAnP1MQJWaK4T7b642vaYnHpuXDZezZyvQBO
+eVhvy7JLmAxBRioGmCJeOx/BdjDVktroeQcNE/BaAnnv0L1+y5hFqDtOVHp+ycjc
+YNhIvUCTQuAUIlYLJfNREmCevmH0o5sIDjnuZxq/SjVGCZw2cdHvgPcCo0Z2FAAC
+mRdK0IVBYJMQBwbtoMbE1W9+2be+JgTcUPzTVsy9O6KtUbQenEuz349EwwKIoq+9
+xl2Vh1tJx3L4bGWu+SirpfFO7UvQHXZi9UdyzvkIWV1MW0Kp1dCHNz1sCDX+0wHu
+dBNbBATfeYzFF8qLv7MCKWxfvQ4oG0Wyr00Ir5EjOFrXeDtYG1Q1IKhKoyXf5m4Y
+Vnxu4zyUH7PZBDRbLTmUi1Ea4edHw2bSVMu8OCp1Z/pZRKhC6sK8X4rlB6/tL2HF
+YCGzn8qCdCnfLAOAjuLYYFhOG3hgIpwXuSzbicB38AgP59gYcUtiOmWcBFaFU/Ia
+0/lIaD9vAtgBF5oZpvAJdaKdeKd78bU6n7UAbeAlQPQQxmSVQEI=
+=ulzn
+-----END PGP SIGNATURE-----

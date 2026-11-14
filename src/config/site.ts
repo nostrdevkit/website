@@ -11,16 +11,28 @@ export const site = {
   docsUrl: "https://doc.nostrdevkit.org/",
   githubUrl: "https://github.com/nostrdevkit",
   repositoryUrl: "https://github.com/nostrdevkit",
+  repositories: [
+    {
+      name: "GitHub",
+      url: "https://github.com/nostrdevkit",
+      description: "Main development place — issues, pull requests, and releases.",
+    },
+    {
+      name: "GitLab",
+      url: "https://gitlab.com/nostrdevkit",
+      description: "Mirror, kept in sync with GitHub.",
+    },
+    {
+      name: "Nostr",
+      url: "https://gitworkshop.dev/yukikishimoto.com/relay.ngit.dev/nostr",
+      description: "Patches and collaboration over Nostr.",
+    },
+  ],
   socials: {
     nostr: {
       name: "Nostr",
       url: "https://primal.net/p/nprofile1qqswws84s7qf36ap5z5p6fgyacqhr388nd6ljff5mgel0a3q704qkrgv47rlk",
       identifier: "nostrdevkit.org",
-    },
-    github: {
-      name: "GitHub",
-      url: "https://github.com/nostrdevkit",
-      identifier: "@nostrdevkit",
     },
     matrix: {
       name: "Matrix",
@@ -28,7 +40,7 @@ export const site = {
       identifier: "#nostrdevkit:matrix.org",
     },
   },
-  themeColor: "#0b0714",
+  themeColor: "#0a0616",
   keywords: [
     "Nostr",
     "Nostr SDK",
