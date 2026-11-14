@@ -1,22 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
 
-The Nostr Dev Kit Project has one official bitcoin (BTC) donation address:
+The Nostr Dev Kit Project has the following donation addresses.
 
-bc1quk478kpm45744q5pt3p9j42fnv72ykytmt3z0j
+Bitcoin
+    onchain: bc1qt9gzpm3w7ue7yj074et4xqsvf6ct8vmyjywkzv
+    lightning: pay@nostrdevkit.org
+    lightning: nostrdevkit@cake.cash
+    silent payments: sp1qqghlzq9hqfu8ww2audck67j0uyztm3avsclkt87wam7aewppqhyvsq3q6eqsr0mgc9epca9nn6ku34sse9va7qmsh2x7m5csly5eg2tkrgyy7qyk
+
+Monero
+    address: 47UgeKjhpCciGLApQJ1KxE6nnKiWBmMoBLVzDfvJFQJM6aruWzB41eAWwsf63AinVxd5r1rc12hwmG3VSKfpU3qy5XoyBMu
+
+Last update: 2026/11/14
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEhvMQWt+oq1hyaNzXjT3NBCSWGdEFAmr4amEACgkQjT3NBCSW
-GdHHRg/9EViCD4kutDo2frwDLqqKM68Xy61DTnfT3Lf3/3bc9fBg7jO9l+n1F5oq
-rXLO0l5OkUi/30VaAZuwBFPtJhKUzIJZpganPYyjy0yH5Ve41/ZdiOUO/IEFUnjc
-CAvJgRjssQZ5mbn9bUDVDDbo5HyUTAnP1MQJWaK4T7b642vaYnHpuXDZezZyvQBO
-eVhvy7JLmAxBRioGmCJeOx/BdjDVktroeQcNE/BaAnnv0L1+y5hFqDtOVHp+ycjc
-YNhIvUCTQuAUIlYLJfNREmCevmH0o5sIDjnuZxq/SjVGCZw2cdHvgPcCo0Z2FAAC
-mRdK0IVBYJMQBwbtoMbE1W9+2be+JgTcUPzTVsy9O6KtUbQenEuz349EwwKIoq+9
-xl2Vh1tJx3L4bGWu+SirpfFO7UvQHXZi9UdyzvkIWV1MW0Kp1dCHNz1sCDX+0wHu
-dBNbBATfeYzFF8qLv7MCKWxfvQ4oG0Wyr00Ir5EjOFrXeDtYG1Q1IKhKoyXf5m4Y
-Vnxu4zyUH7PZBDRbLTmUi1Ea4edHw2bSVMu8OCp1Z/pZRKhC6sK8X4rlB6/tL2HF
-YCGzn8qCdCnfLAOAjuLYYFhOG3hgIpwXuSzbicB38AgP59gYcUtiOmWcBFaFU/Ia
-0/lIaD9vAtgBF5oZpvAJdaKdeKd78bU6n7UAbeAlQPQQxmSVQEI=
-=ulzn
+iQIzBAEBCgAdFiEEhvMQWt+oq1hyaNzXjT3NBCSWGdEFAmr4kOoACgkQjT3NBCSW
+GdF6yA/+LuumsHeFFVXp2fTWZ1GrRc5xI20x7c0u180Mf5jBUkRZAlCK2Z7eRDuJ
+bftjq2QJF8ymvWYCGJ9ZZlYi3VE7eB6OLnLUUtYcyN8p6WEnIF5KKJuzNwEs8NU3
+mIZWCN2drK417iCt2ni54t0H9HSSMPJ2PXflw27RBqmcGvKGUHNDOaB8WFw24GUV
+cWb0DY/rQX0fRkvK5QUsa3FEfFV/ExZF2ef+yoztuls9snNOR/kMKHS8mkk5wSgi
+orWz3u4iYggHagpAW4ZlbyNj5vzK9qZnxNw/Z2EtJfc+veZWmMYWDf82Z646Lmbf
+vrROTV8ICsAzCaB40wNeCOZwF/MZh9QLwLT7e1nSHVme3AsDq9YHjRotubgQdKcE
+MNPUnrpEqOOafO6GGHZVtUDyG+RiTnvLj7i3BPYIBtboSpg+gci8trfl13dx1K/R
+o2mAUqydfhpkOfxuXOK9K/m6YOxFwrTGakQzrw/uiXd3SMXPrg/Xs4DPEvAdy3Ey
+FckG7yNP/3h1++Yyulr+sF0YrLkl6OOAJ4QkvuXm/q1oupC5q27NDFg6zqNXq/NM
+AN3tkCGUoFNk5Ic+YVVdMKsocr1ecX4EZDuzAMH9/JECZ2n92a7VsVw0VoIiVwze
+UIr/XPDUbG5HeADKjO02Lnn9yFAcrjEHxtCKr1vw3OqxvnvorUw=
+=tkCF
 -----END PGP SIGNATURE-----

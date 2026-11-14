@@ -692,16 +692,6 @@ html[data-theme="light"] .donate-panel.featured {
   line-height: 1.55;
 }
 
-.copy-field.link-field { cursor: pointer; }
-
-.copy-field.link-field code { color: var(--muted); }
-
-.copy-field.link-field:hover code { color: var(--accent-2); }
-
-.copy-field.link-field .ico-ext { flex: none; margin-left: auto; color: var(--subtle); transition: color 0.15s; }
-
-.copy-field.link-field:hover .ico-ext { color: var(--accent-2); }
-
 .copy-field {
   display: flex;
   align-items: center;
@@ -724,12 +714,12 @@ html[data-theme="light"] .copy-field:hover { border-color: rgba(109, 74, 255, 0.
 
 .copy-field .field-name {
   flex: none;
-  width: 84px;
-  white-space: nowrap;
+  width: 96px;
   color: var(--subtle);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.07em;
+  line-height: 1.45;
   text-transform: uppercase;
 }
 

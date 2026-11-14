@@ -2,22 +2,22 @@
 import Base from "../../layouts/Base.astro";
 import { withBase } from "../../utils/paths";
 
-// One-time donation address groups — add a currency by appending an entry.
-// Fields are either copyable addresses (value + label) or provider links (href).
-// Example (Monero):
-// {
-//   currency: "Monero",
-//   fields: [{ name: "address", value: "…", label: "Copy Monero address" }],
-// },
 const addressGroups = [
   {
     currency: "Bitcoin",
     fields: [
-      { name: "on-chain", value: "bc1quk478kpm45744q5pt3p9j42fnv72ykytmt3z0j", label: "Copy on-chain donation address" },
-      { name: "lightning", value: "pay@yukikishimoto.com", label: "Copy lightning address" },
-      { name: "any method", href: "https://coinos.io/yuki", value: "coinos.io/yuki", label: "Open Coinos — a web wallet supporting on-chain, lightning, and more" },
+      { name: "on-chain", value: "bc1qt9gzpm3w7ue7yj074et4xqsvf6ct8vmyjywkzv", label: "Copy on-chain donation address" },
+      { name: "lightning", value: "pay@nostrdevkit.org", label: "Copy lightning address" },
+      { name: "lightning", value: "nostrdevkit@cake.cash", label: "Copy lightning address" },
+      { name: "silent payments", value: "sp1qqghlzq9hqfu8ww2audck67j0uyztm3avsclkt87wam7aewppqhyvsq3q6eqsr0mgc9epca9nn6ku34sse9va7qmsh2x7m5csly5eg2tkrgyy7qyk", label: "Copy SP address" },
     ],
   },
+  {
+    currency: "Monero",
+    fields: [
+      { name: "address", value: "47UgeKjhpCciGLApQJ1KxE6nnKiWBmMoBLVzDfvJFQJM6aruWzB41eAWwsf63AinVxd5r1rc12hwmG3VSKfpU3qy5XoyBMu", label: "Copy donation address" },
+    ]
+  }
 ];
 ---
 <Base title="Donate - Nostr Dev Kit" description="Support Nostr Dev Kit development with bitcoin donations or sustained sponsorship.">
@@ -49,28 +49,18 @@ const addressGroups = [
           {addressGroups.map((group) => (
             <div class="address-group">
               <p class="address-group-label">{group.currency}</p>
-              {group.fields.map((field) =>
-                field.href ? (
-                  <a class="copy-field link-field" href={field.href} target="_blank" rel="noopener noreferrer" aria-label={field.label}>
-                    <span class="field-name">{field.name}</span>
-                    <code>{field.value}</code>
-                    <svg class="ico-ext" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M7 17 17 7M7 7h10v10" />
-                    </svg>
-                  </a>
-                ) : (
-                  <div class="copy-field" role="button" tabindex="0" data-copy={field.value} aria-label={field.label}>
-                    <span class="field-name">{field.name}</span>
-                    <code>{field.value}</code>
-                    <svg class="ico-copy" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <rect x="9" y="9" width="13" height="13" rx="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                    </svg>
-                    <svg class="ico-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M20 6 9 17l-5-5" />
-                    </svg>
-                  </div>
-                )
-              )}
+              {group.fields.map((field) => (
+                <div class="copy-field" role="button" tabindex="0" data-copy={field.value} aria-label={field.label}>
+                  <span class="field-name">{field.name}</span>
+                  <code>{field.value}</code>
+                  <svg class="ico-copy" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                  </svg>
+                  <svg class="ico-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                </div>
+              ))}
             </div>
           ))}
         </div>
