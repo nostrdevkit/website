@@ -365,6 +365,15 @@ a.principle:hover::after { opacity: 1; transform: none; }
 
 .hero .eyebrow, .hero h1, .hero .hero-text, .hero .hero-actions { animation: rise 0.7s ease backwards; }
 
+.hero .eyebrow {
+  padding: 0;
+  border: none;
+  background: none;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 15px;
+}
+
 .hero h1 { animation-delay: 0.08s; }
 .hero .hero-text { animation-delay: 0.16s; }
 .hero .hero-actions { animation-delay: 0.24s; }
