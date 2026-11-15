@@ -283,6 +283,7 @@ h1 {
 
 @media (prefers-reduced-motion: reduce) {
   .pulse, .shimmer { animation: none; }
+  .slab-join::after { display: none; }
 }
 
 h2 {
@@ -470,7 +471,12 @@ a.principle:hover::after { opacity: 1; transform: none; }
   border: 1px solid var(--line);
   border-radius: 12px;
   background: rgba(139, 92, 246, 0.05);
+  transition: transform 0.18s, border-color 0.18s;
 }
+
+.slab:hover { transform: translateY(-2px); border-color: rgba(192, 132, 252, 0.45); }
+
+html[data-theme="light"] .slab:hover { border-color: rgba(109, 74, 255, 0.45); }
 
 html[data-theme="light"] .slab { background: rgba(109, 74, 255, 0.04); }
 
@@ -513,10 +519,35 @@ html[data-theme="light"] .slab-core {
 }
 
 .slab-join {
+  position: relative;
   width: 1px;
-  height: 16px;
-  margin: 4px auto;
+  height: 22px;
+  margin: 6px auto;
   background: linear-gradient(to bottom, rgba(192, 132, 252, 0.5), var(--line));
+}
+
+/* data flowing app → core */
+.slab-join::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  width: 5px;
+  height: 5px;
+  margin-left: -2.5px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  box-shadow: 0 0 8px rgba(192, 132, 252, 0.9);
+  animation: slab-flow 2.2s ease-in-out infinite;
+}
+
+.slab-libs + .slab-join::after { animation-delay: 0.5s; }
+
+@keyframes slab-flow {
+  0% { top: -2px; opacity: 0; }
+  18% { opacity: 1; }
+  82% { opacity: 1; }
+  100% { top: calc(100% + 2px); opacity: 0; }
 }
 
 .chip {
@@ -566,7 +597,23 @@ html[data-theme="light"] .chip-more:hover { border-color: rgba(109, 74, 255, 0.7
 
 .why-points li:hover { background: var(--row-hover, rgba(139, 92, 246, 0.06)); }
 
-.why-points svg { flex: none; margin-top: 2px; color: var(--accent-2); }
+.why-points svg {
+  flex: none;
+  margin-top: 1px;
+  padding: 9px;
+  box-sizing: content-box;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: rgba(139, 92, 246, 0.08);
+  color: var(--accent-2);
+  transition: border-color 0.18s, background 0.18s;
+}
+
+html[data-theme="light"] .why-points svg { background: rgba(109, 74, 255, 0.07); }
+
+.why-points li:hover svg { border-color: rgba(192, 132, 252, 0.55); background: rgba(139, 92, 246, 0.14); }
+
+html[data-theme="light"] .why-points li:hover svg { border-color: rgba(109, 74, 255, 0.55); background: rgba(109, 74, 255, 0.12); }
 
 .why-points h3 { margin: 0 0 5px; font-size: 16px; }
 
