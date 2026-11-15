@@ -46,8 +46,8 @@ document.querySelectorAll("[data-copy]").forEach((el) => {
   });
 });
 
-// --- cursor-following glow on cards ---
-  document.querySelectorAll(".glow-card").forEach((card) => {
+  // --- cursor-following glow on cards + hero spotlight ---
+  document.querySelectorAll(".glow-card, .hero").forEach((card) => {
     card.addEventListener("pointermove", (e) => {
       const rect = card.getBoundingClientRect();
       card.style.setProperty("--mx", e.clientX - rect.left + "px");
