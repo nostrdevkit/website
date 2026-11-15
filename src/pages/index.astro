@@ -4,7 +4,7 @@ import { site } from "../config/site";
 import { withBase } from "../utils/paths";
 ---
 <Base>
-  <main>
+  <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <p class="eyebrow">Nostr Dev Kit</p>
       <h1 id="hero-title">Nostr for <span class="shimmer">builders</span>.</h1>
@@ -15,6 +15,7 @@ import { withBase } from "../utils/paths";
         <a class="button button-primary" href={site.docsUrl}>Read the docs</a>
         <a class="button button-secondary" href={site.githubUrl}>View GitHub</a>
       </div>
+      <p class="hero-meta">Formerly rust-nostr · MIT · maintained in the open</p>
     </section>
 
     <section class="section" aria-labelledby="why-title">
@@ -113,7 +114,7 @@ import { withBase } from "../utils/paths";
         <p class="eyebrow">Documentation</p>
         <h2 id="docs-title">Go deeper in the book.</h2>
         <p class="section-text">
-          The book contains installation notes, current APIs, examples, etc.
+          The book contains installation notes, current APIs, and examples for every stack.
         </p>
       </div>
       <a class="button button-secondary docs-button" href={site.docsUrl}>
